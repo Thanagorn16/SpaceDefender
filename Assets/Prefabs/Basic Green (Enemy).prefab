@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7166164497551965534}
   - component: {fileID: 3772788680463066823}
   - component: {fileID: 7811304731870053295}
+  - component: {fileID: 4721428923469770422}
+  - component: {fileID: 4647997724989272126}
   m_Layer: 0
   m_Name: Basic Green (Enemy)
   m_TagString: Untagged
@@ -97,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.06306386}
@@ -136,5 +138,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9bf672ded6a574988f1304ececcd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 9e99b98ac8a8eac45a08b44c14aca109, type: 2}
-  waypoints: []
+--- !u!114 &4721428923469770422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662917056350482719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b204dbcfe4c0fa540b0e6e875f15ae1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &4647997724989272126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662917056350482719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9290aa97724d92840ba52a4fcf9165a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
