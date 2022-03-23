@@ -55,6 +55,30 @@ PrefabInstance:
       propertyPath: health
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: useAI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: firingRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: firingTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: minFiringRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: baseFiringRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167531289328950756, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5202195444419706674, guid: 971d5fa2b30d4f74db8aebcae3c6869b, type: 3}
     - target: {fileID: 5662917056350482719, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
       propertyPath: m_Name
       value: V-shape Green (Enemy) Variant
@@ -81,3 +105,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+--- !u!1 &1495491765085955652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5662917056350482719, guid: ff6f18146e81fc343b2802da38dcd23d, type: 3}
+  m_PrefabInstance: {fileID: 6509870630727128923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1942343270711020407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495491765085955652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d499824b74eb02043884cfe6a119a27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  ProjectileSpeed: 10
+  ProjectileLifeTime: 5
+  baseFiringRate: 0.2
+  useAI: 0
+  firingRateVariance: 0
+  minFiringRate: 0.2
+  isFiring: 0

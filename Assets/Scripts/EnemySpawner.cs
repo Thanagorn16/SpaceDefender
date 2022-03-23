@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     Instantiate(currentWave.GetEnemyPrefab(i), 
                                 currentWave.GetStartingWaypoint().position,
-                                Quaternion.identity,
+                                Quaternion.Euler(0,0,180), // we want the gameObject to flip 180 when instantiate. Noted that this has nothing with the sprite, but the gameObject.
                                 transform);
                     
                     yield return new WaitForSeconds(currentWave.GetRandomSpawnTime());
