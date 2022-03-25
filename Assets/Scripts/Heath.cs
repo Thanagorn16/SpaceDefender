@@ -9,10 +9,12 @@ public class Heath : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
+    AudioPlayer audioPlayer;
 
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +25,7 @@ public class Heath : MonoBehaviour
         {
             // take damage
             TakeDamage(damageDealer.GetDamage());
+            audioPlayer.PlayDamageClip();
             PlayHitEffect();
             ShakeCamera();
             damageDealer.Hit();
