@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,16 +6,26 @@ using UnityEngine;
 public class Heath : MonoBehaviour
 {
     [SerializeField] int health = 50;
+    [SerializeField] int score = 50;
 
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
+    [SerializeField] bool isPlayer;
+   
     CameraShake cameraShake;
     AudioPlayer audioPlayer;
+    ScoreKeeper scoreKeeper;
 
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+
+    public int CurrentHealth()
+    {
+        return health;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -38,8 +49,18 @@ public class Heath : MonoBehaviour
 
         if(health <= 0)
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if(!isPlayer)
+        {
+            scoreKeeper.ModifyScore(score);
+        }
+        Destroy(gameObject);
     }
 
     void PlayHitEffect()
