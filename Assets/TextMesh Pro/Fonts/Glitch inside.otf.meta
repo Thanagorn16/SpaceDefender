@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b4d2449cf69eda4fa67bffd334b1188
+guid: 18d95ca4972f85849abc2306dc497423
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Walk The Moon
+  - Glitch Inside
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
